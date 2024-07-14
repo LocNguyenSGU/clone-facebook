@@ -1,0 +1,27 @@
+/* src/styles/sprite.css */
+.icon {
+    width: 36px;
+    height: 36px;
+    display: inline-block; /* Đảm bảo rằng icon hiển thị như một phần tử inline-block */
+    background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/ITLxLTUj6La.png?_nc_eui2=AeFV66gJw9HU-JfMJ8RVTT9IWE8QWqAZS1BYTxBaoBlLUIZdCS2dyD7TMZoWHY1KlpgqJZh4A5JxcKF8bLT692k9');
+    background-size: cover; /* Đảm bảo kích thước phù hợp với kích thước thật của tấm ảnh sprite */
+}
+.icon-group {
+    background-position: 0 -36px;
+}
+.icon-saved {
+    background-position: 0 -144px;
+}
+.icon-friend {
+    background-position: 0 -252px; /* Điều chỉnh vị trí để lấy icon chính xác */
+}
+.icon-marketplace {
+    background-position: 0 -360px;
+}
+.icon-memories {
+    background-position: 0 -396px;
+}
+.icon-video {
+    background-position: 0 -468px;
+}
+
