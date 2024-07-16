@@ -1,5 +1,5 @@
 import React from "react";
-import BirthdayIcon from "../icons/BirthdayIcon";
+import BirthdayIcon from "../../asset/icons/BirthdayIcon";
 
 const BodyLeft = () => {
   return (

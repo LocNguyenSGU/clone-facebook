@@ -1,6 +1,6 @@
 import React from "react";
-import SearchIcon from "../icons/SearchIcon";
-import ThreeDotIcon from "../icons/ThreeDotIcon";
+import SearchIcon from "../../asset/icons/SearchIcon";
+import ThreeDotIcon from "../../asset/icons/ThreeDotIcon";
 
 const BodyRight = () => {
   return (

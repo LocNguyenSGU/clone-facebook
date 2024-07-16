@@ -1,19 +1,19 @@
 import React from "react";
-import PublicIcon from "../icons/modeIcon/PublicIcon";
-import ThreeDotIcon from "../icons/ThreeDotIcon";
-import XMarkIcon from "../icons/XMarkIcon";
-import NumberLikeIcon from "../icons/NumberLikeIcon";
+import PublicIcon from "../../asset/icons/modeIcon/PublicIcon";
+import ThreeDotIcon from "../../asset/icons/ThreeDotIcon";
+import XMarkIcon from "../../asset/icons/XMarkIcon";
+import NumberLikeIcon from "../../asset/icons/NumberLikeIcon";
 import { AiOutlineLike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa6";
 import { TbShare3 } from "react-icons/tb";
-import liveVideoIcon from "../../asset/icon/liveVideoIcon.png";
-import feelingIcon from "../../asset/icon/feelingIcon.png";
-import imageIcon from "../../asset/icon/imageIcon.png";
+import liveVideoIcon from "../../asset/icons/liveVideoIcon.png";
+import feelingIcon from "../../asset/icons/feelingIcon.png";
+import imageIcon from "../../asset/icons/imageIcon.png";
 
 const MainContent = () => {
   return (
     <>
-      <div className="main-content mr-[10px] mt-[20px] h-[calc(100vh-57px)] overflow-y-auto overflow-hidden col-span-6 p-7">
+      <div className="main-content mr-[10px] mt-[20px] h-[calc(100vh-57px)] overflow-y-auto overflow-hidden col-span-6 p-7 no-scrollbar">
         <div className="list-story flex gap-2 items-center">
           <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>
           <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>

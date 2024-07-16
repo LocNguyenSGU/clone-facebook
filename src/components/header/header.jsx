@@ -1,16 +1,17 @@
 import React from "react";
-
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
-import VideoIcon from "../icons/VideoIcon";
-import MarketPlaceIcon from "../icons/MarketPlaceIcon";
-import GroupIcon from "../icons/GroupIcon";
-import HomeIconSolid from "../icons/HomeIconSolid";
-import GamingIcon from "../icons/GamingIcon";
-import SearchIcon from "../icons/SearchIcon";
-import HomeIcon from "../icons/HomeIcon";
-import MenuIcon from "../icons/MenuIcon";
-import MessageIcon from "../icons/MessageIcon";
-import NotifyIcon from "../icons/NotifyIcon";
+import VideoIcon from "../../asset/icons/VideoIcon";
+import MarketPlaceIcon from "../../asset/icons/MarketPlaceIcon";
+import GroupIcon from "../../asset/icons/GroupIcon";
+import HomeIconSolid from "../../asset/icons/HomeIconSolid";
+import GamingIcon from "../../asset/icons/GamingIcon";
+import SearchIcon from "../../asset/icons/SearchIcon";
+import HomeIcon from "../../asset/icons/HomeIcon";
+import MenuIcon from "../../asset/icons/MenuIcon";
+import MessageIcon from "../../asset/icons/MessageIcon";
+import NotifyIcon from "../../asset/icons/NotifyIcon";
+import Navigate from "../navigate/Navigate";
 
 const Header = () => {
   return (
@@ -29,29 +30,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="navigate mr-[109px]">
-          <ul className="list-item-nav flex items-center gap-2 justify-center content-center">
-            <div className="item-block relative">
-              <li className="nav-item text-center w-28 h-10 flex justify-center items-center text-blue-600 hover:bg-gray-200 hover:rounded-lg">
-                {/* <HomeIcon></HomeIcon> */}
-                <HomeIconSolid></HomeIconSolid>
-              </li>
-              <div className="w-full rounded-sm h-[3px] bg-blue-600 absolute -bottom-2 left-0"></div>
-            </div>
-            <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
-              <VideoIcon></VideoIcon>
-            </li>
-            <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
-              <MarketPlaceIcon></MarketPlaceIcon>
-            </li>
-            <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
-              <GroupIcon></GroupIcon>
-            </li>
-            <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
-              <GamingIcon></GamingIcon>
-            </li>
-          </ul>
-        </div>
+        <Navigate></Navigate>
         <div className="notify-block flex items-center gap-2">
           <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200">
             <MenuIcon></MenuIcon>
