@@ -5,7 +5,7 @@ import ThreeDotIcon from "../icons/ThreeDotIcon";
 const BodyRight = () => {
   return (
     <>
-      <div className="body-right mt-[20px] w-[348px] h-screen overflow-y-auto">
+      <div className="body-right mt-[20px h-[calc(100vh-57px)] overflow-y-auto col-span-3 mt-4">
         <div className="header flex content-between justify-between">
           <h2 className="title text-lg text-gray-600">Contacts</h2>
           <div className="flex gap-5 items-center">

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <body className="container-block bg-slate-100 w-screen h-screen mt-[57px] flex justify-between overflow-hidden">
+      <body className="container-block bg-slate-100 w-screen h-[calc(100bh - 57px)] mt-[57px] grid grid-cols-12 gap-4 h-[calc(100vh-57px)] overflow-hidden">
         <BodyLeft></BodyLeft>
         <MainContent></MainContent>
         <BodyRight></BodyRight>

@@ -13,8 +13,9 @@ import imageIcon from "../../asset/icon/imageIcon.png";
 const MainContent = () => {
   return (
     <>
-      <div className="main-content mr-[10px] mt-[20px] w-[584px] h-screen overflow-y-auto overflow-hidden">
+      <div className="main-content mr-[10px] mt-[20px] h-[calc(100vh-57px)] overflow-y-auto overflow-hidden col-span-6 p-7">
         <div className="list-story flex gap-2 items-center">
+          <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>
           <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>
           <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>
           <div className="card-story w-[140px] h-[250px] bg-slate-300 rounded-md"></div>
