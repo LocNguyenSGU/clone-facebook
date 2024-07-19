@@ -25,12 +25,12 @@ const Navigate = () => {
                 </span>
               </li>
             </NavLink>
-            <div className="w-full rounded-sm h-[3px] bg-blue-600 absolute -bottom-2 left-0 hidden"></div>
+            <div className="w-full rounded-sm h-[3px] bg-blue-600 absolute -bottom-1 left-0 hidden"></div>
           </div>
 
           <div className="item-block relative">
             <NavLink to="/video">
-              <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
+              <li className="nav-item text-center w-28 h-10 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
                 <span className="icon-nomal">
                   <VideoIcon></VideoIcon>
                 </span>
@@ -42,13 +42,13 @@ const Navigate = () => {
             <div className="w-full rounded-sm h-[3px] bg-blue-600 absolute -bottom-1 left-0 hidden"></div>
           </div>
 
-          <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
+          <li className="nav-item text-center w-28 h-10 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
             <MarketPlaceIcon></MarketPlaceIcon>
           </li>
 
           <div className="item-block relative">
             <NavLink to="/group">
-              <li className="nav-item  text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
+              <li className="nav-item  text-center w-28 h-10 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
                 <span className="icon-nomal">
                   <GroupIcon></GroupIcon>
                 </span>
@@ -60,7 +60,7 @@ const Navigate = () => {
             <div className="w-full rounded-sm h-[3px] bg-blue-600 absolute -bottom-1 left-0 hidden"></div>
           </div>
 
-          <li className="nav-item text-center w-28 h-12 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
+          <li className="nav-item text-center w-28 h-10 flex justify-center items-center text-gray-500 hover:bg-gray-200 hover:rounded-lg">
             <GamingIcon></GamingIcon>
           </li>
         </ul>

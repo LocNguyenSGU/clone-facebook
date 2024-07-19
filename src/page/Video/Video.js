@@ -1,10 +1,13 @@
 import React from 'react';
+import LeftWatch from '../../components/leftWatch/LeftWatch';
+import Watch from '../../components/Watch/Watch';
 
 const Video = () => {
     return (
-        <div>
-            <>Video</>
-        </div>
+        <>
+          <LeftWatch></LeftWatch>
+          <Watch></Watch>
+        </>
     );
 };
 
