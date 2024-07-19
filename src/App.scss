@@ -1,3 +1,22 @@
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: rgb(241, 245, 249);
+}
+.list-item-nav .active li {
+  color: rgb(37, 99, 235);
+}
+.list-item-nav .active + div {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.list-item-nav .active li .icon-nomal {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.list-item-nav .active li .icon-solid {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }

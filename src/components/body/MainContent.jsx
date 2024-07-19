@@ -66,13 +66,13 @@ const MainContent = () => {
           <div className="post shadow-lg mt-4 bg-white rounded-lg">
             <div className="p-3 pb-0 header-post flex items-center gap-3">
               <img
-                className="w-10 h-10 rounded-full"
+                className="w-10 h-10 rounded-full cursor-pointer"
                 // src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeFl6l4OpDGVujJD483s_MXtso2H55p0AlGyjYfnmnQCUW3TbxnQbwfTJOqVf0ziXjt2rkCiydc2elHiyuOz-sPC&_nc_ohc=IIi3OwsH1EIQ7kNvgHLmgY2&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYDD-d6OyTv-pw14CZA7L9NnQmD50COZY_SInxgA4R9etA&oe=66BACB38"
                 src="https://scontent.fsgn5-7.fna.fbcdn.net/v/t39.30808-1/352190005_1600614940349484_5227447212799118808_n.jpg?stp=cp0_dst-jpg_p80x80&_nc_cat=1&ccb=1-7&_nc_sid=f4b9fd&_nc_eui2=AeEAqXs7qN6XeSBbvTIQkgIk5J2mPlPA3vTknaY-U8De9NuD4wTTo7P8qA_0VINwDy9FmeEjZWLNhfZAUaIXtvWR&_nc_ohc=_mWOTIqDFOMQ7kNvgE_mHKJ&_nc_ht=scontent.fsgn5-7.fna&oh=00_AYDVLI5ga7N0IvlltBgaLVlsZxODN96Ze-QsW2iZTagYFA&oe=669A66B5"
                 alt="image-no-avartar"
               />
               <div className="name-time flex flex-col min-w-[77%]">
-                <span className="name text-base font-medium">VTV 24</span>
+                <span className="name text-base font-medium cursor-pointer">VTV 24</span>
                 <div className="flex items-center content-center gap-2">
                   <span className="time text-sm text-gray-500 font-light ">
                     5 hours ago
@@ -83,7 +83,7 @@ const MainContent = () => {
                   </div>
                 </div>
               </div>
-              <div className="menu-action flex items-center gap-4 text-gray-500">
+              <div className="menu-action flex items-center gap-4 text-gray-500 cursor-pointer">
                 <ThreeDotIcon></ThreeDotIcon>
                 <XMarkIcon></XMarkIcon>
               </div>
