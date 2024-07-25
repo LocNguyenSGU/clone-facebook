@@ -8,7 +8,7 @@ import { RiSaveFill } from "react-icons/ri";
 const LeftVideo = () => {
   return (
     <>
-      <div className="col-span-3 bg-white h-screen pt-4 shadow-custom ">
+      <div className="col-span-3 bg-white h-screen pt-4 shadow-custom">
         <h1 className="text-xl font-semibold pl-4">Video</h1>
         <div className="search relative px-4 mt-2">
           <input
