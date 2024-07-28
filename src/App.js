@@ -10,6 +10,7 @@ import Group from "./page/Group/Group";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Signin from "./page/Signin/Signin";
 import { useState } from "react";
+import Signup from "./page/Signup/Signup";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true)
   const navigate = useNavigate()
@@ -27,7 +28,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/video" element={<Video></Video>}></Route>
           <Route path="/group" element={<Group></Group>}></Route>
-          <Route path="/signin" element={<Signin></Signin>}></Route>
+          <Route path="/signin" element={<Signup></Signup>}></Route>
         </Routes>
         {/* <BodyRight></BodyRight> */}
       </body>

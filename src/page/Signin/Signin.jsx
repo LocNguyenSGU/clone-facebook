@@ -1,6 +1,11 @@
-import React from "react";
+import useHandleChange from "../../hooks/useHandleChange";
 
 const Signin = () => {
+  const {values, handleChange} = useHandleChange({
+    email: "",
+    password: ""
+  })
+  console.log("form ~ values", values)
   return (
     <>
       <div>
@@ -11,6 +16,7 @@ const Signin = () => {
               type="text"
               name="email"
               placeholder="Enter your email"
+              onChange={handleChange}
             />
             <div className="error h-2"></div>
           </div>
@@ -20,6 +26,7 @@ const Signin = () => {
               type="password"
               name="password"
               placeholder="Enter your password"
+              onChange={handleChange}
             />
             <div className="error h-2"></div>
           </div>
