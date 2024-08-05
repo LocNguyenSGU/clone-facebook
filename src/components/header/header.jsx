@@ -8,13 +8,18 @@ import Navigate from "../navigate/Navigate";
 import { IoInvertModeOutline } from "react-icons/io5";
 import { IoLogOut } from "react-icons/io5";
 import { IoIosSettings } from "react-icons/io";
-import { NavLink } from "react-router-dom";
-const Header = ({onLogout}) => {
+import { NavLink, useNavigate } from "react-router-dom";
+const Header = () => {
   const [modal, setModal] = useState(false);
+  const navigate = useNavigate();
   const toggleModal = () => {
     setModal(!modal);
     console.log("modal: ", modal);
   };
+  const handleLogout = () => {
+    localStorage.setItem("token", "");
+    navigate("/login")
+  }
   return (
     <>
       <header className="pt-1 pb-1 container-block flex items-center content-between justify-between shadow-custom border-b-[1px] fixed top-0 bg-white z-10">
@@ -86,8 +91,8 @@ const Header = ({onLogout}) => {
                     </div>
                     <span className="title-item">Dark mode</span>
                   </div>
-                  <NavLink to="/signin">
-                    <div className="item flex items-center gap-3 p-2 rounded-md hover:bg-gray-100 cursor-pointer" onClick={onLogout}>
+                  <NavLink to="/login">
+                    <div className="item flex items-center gap-3 p-2 rounded-md hover:bg-gray-100 cursor-pointer" onClick={handleLogout}>
                       <div className="icon-item w-9 h-9 bg-slate-200 rounded-full flex items-center justify-center text-2xl hover:bg-slate-200 cursor-pointer">
                         <IoLogOut></IoLogOut>
                       </div>

@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import useHandleChange from "../../hooks/useHandleChange";
 
 const Signup = () => {
+  const navigate = useNavigate()
   const { values, handleChange } = useHandleChange({
     email: "",
     password: "",
   });
+  const handleLogin = () => {
+    navigate("/login")
+  }
   console.log("form ~ values", values);
   return (
     <>
@@ -85,6 +90,9 @@ const Signup = () => {
             <div className="btn w-full p-3 text-center bg-green-600 rounded-lg text-white font-bold text-base cursor-pointer">
               Sign up
             </div>
+          </div>
+          <div className="item text-center cursor-pointer text-blue-500" onClick={handleLogin}>
+              Already have account
           </div>
         </form>
       </div>
