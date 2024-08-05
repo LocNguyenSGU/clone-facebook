@@ -16,6 +16,7 @@ function App() {
   const navigate = useNavigate()
   const handleLogout = () => {
     setIsAuthenticated(false);
+    localStorage.setItem("token", "");
     navigate("/signin")
   }
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/video" element={<Video></Video>}></Route>
           <Route path="/group" element={<Group></Group>}></Route>
-          <Route path="/signin" element={<Signup></Signup>}></Route>
+          <Route path="/signin" element={<Signin></Signin>}></Route>
         </Routes>
         {/* <BodyRight></BodyRight> */}
       </body>
