@@ -1,6 +1,6 @@
 import "./index.scss";
 import "./style/sprite.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Signup from "./page/Signup/Signup";
 import Login from "./page/Login/Login";
 import ContentPage from "./page/Content/ContentPage";

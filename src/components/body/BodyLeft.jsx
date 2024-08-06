@@ -4,7 +4,7 @@ import BirthdayIcon from "../../asset/icons/BirthdayIcon";
 const BodyLeft = () => {
   return (
     <>
-      <div className="body-left h-[calc(100vh-57px)] overflow-y-auto sticky top-0 col-span-3 mt-2">
+      <div className="body-left h-[calc(100vh-57px)] overflow-y-auto col-span-3 mt-2">
         <div className="list-menu pt-3">
           <div className="item-menu flex items-center gap-2">
             <div className="item w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 cursor-pointer">

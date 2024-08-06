@@ -7,7 +7,7 @@ import Group from "../Group/Group";
 
 const ContentPage = () => {
   return (
-    <div>
+    <div className="app-container">
       <Header />
       <div className="container-block bg-slate-100 w-screen h-[calc(100vh - 57px)] mt-[57px] grid grid-cols-12 gap-4 overflow-hidden">
         <Routes>
