@@ -15,7 +15,7 @@ import PlusIcon from "../../asset/icons/PlusIcon";
 const MainContent = () => {
   return (
     <>
-      <div className="main-content mr-[10px] h-[calc(100vh-57px)] overflow-y-auto overflow-x-auto col-span-6 p-7 no-scrollbar">
+      <div className="main-content mr-[10px] h-[calc(100vh-57px)] overflow-y-auto overflow-x-auto col-span-6 p-7 no-scrollbar pt-4">
         <div className="list-story flex gap-4 overflow-x-auto">
           <div className="card-story w-[140px] h-[250px] rounded-md bg-white relative shadow-lg">
             <div className="border-img w-10 h-10 border-[4px] border-white flex items-center justify-center absolute rounded-full top-[180px] left-[48px] bg-blue-500 text-white">

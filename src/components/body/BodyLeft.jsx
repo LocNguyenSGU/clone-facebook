@@ -1,12 +1,14 @@
 import React from "react";
 import BirthdayIcon from "../../asset/icons/BirthdayIcon";
+import { NavLink } from "react-router-dom";
 
 const BodyLeft = () => {
   return (
     <>
-      <div className="body-left h-[calc(100vh-57px)] overflow-y-auto col-span-3 mt-2">
-        <div className="list-menu pt-3">
-          <div className="item-menu flex items-center gap-2">
+      <div className="body-left h-[calc(100vh-57px)] overflow-y-auto col-span-3 pt-2">
+        <div className="list-menu pt-1">
+          <NavLink to="profile">
+          <div className="item-menu flex items-center gap-2 p-2 rounded-md hover:bg-gray-200 cursor-pointer">
             <div className="item w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 cursor-pointer">
               <img
                 className="w-full h-full rounded-full"
@@ -16,6 +18,8 @@ const BodyLeft = () => {
             </div>
             <span className="text-base cursor-pointer">Nguyễn Hữu Lộc</span>
           </div>
+          </NavLink>
+          
           <div className="item-menu flex items-center gap-2 p-2 rounded-md hover:bg-gray-200 cursor-pointer">
             <div className="icon icon-friend w-7 h-7"></div>
             <span className="text-base">Friends</span>
