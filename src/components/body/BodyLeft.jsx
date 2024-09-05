@@ -3,6 +3,9 @@ import BirthdayIcon from "../../asset/icons/BirthdayIcon";
 import { NavLink } from "react-router-dom";
 
 const BodyLeft = () => {
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+  console.log("123");
+  console.log(userInfo);
   return (
     <>
       <div className="body-left h-[calc(100vh-57px)] overflow-y-auto col-span-3 pt-2">
@@ -12,11 +15,11 @@ const BodyLeft = () => {
             <div className="item w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 cursor-pointer">
               <img
                 className="w-full h-full rounded-full"
-                src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeFl6l4OpDGVujJD483s_MXtso2H55p0AlGyjYfnmnQCUW3TbxnQbwfTJOqVf0ziXjt2rkCiydc2elHiyuOz-sPC&_nc_ohc=IIi3OwsH1EIQ7kNvgHLmgY2&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYDD-d6OyTv-pw14CZA7L9NnQmD50COZY_SInxgA4R9etA&oe=66BACB38"
+                src="https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg"
                 alt="image-no-avartar"
               />
             </div>
-            <span className="text-base cursor-pointer">Nguyễn Hữu Lộc</span>
+            <span className="text-base cursor-pointer">{userInfo?.firstName} {userInfo?.lastName}</span>
           </div>
           </NavLink>
           

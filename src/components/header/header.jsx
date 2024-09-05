@@ -10,6 +10,30 @@ import { IoLogOut } from "react-icons/io5";
 import { IoIosSettings } from "react-icons/io";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 const Header = () => {
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const response = await fetch("http://localhost:8080/auth/me", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        const data = await response.json();
+        setUserInfo(data.data);
+      }
+    };
+    fetchUserInfo();
+  }, []); // Chỉ chạy một lần khi component mount
+
+  useEffect(() => {
+    if (userInfo) {
+      localStorage.setItem("userInfo", JSON.stringify(userInfo)); // Lưu dưới dạng chuỗi JSON
+    }
+  }, [userInfo]); // Chỉ chạy khi userInfo thay đổi
   const [modal, setModal] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
@@ -22,24 +46,24 @@ const Header = () => {
     localStorage.setItem("token", "");
     navigate("/login");
   };
-  useEffect(() => {
-    const handleClickOutSide = (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
-        setModal(false);
-      }
-    };
-    if (modal) {
-      document.addEventListener("mousedown", handleClickOutSide);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutSide);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutSide);
-    };
-  }, [modal]);
-  useEffect(() => {
-    setModal(false);
-  }, [location]);
+  // useEffect(() => {
+  //   const handleClickOutSide = (e) => {
+  //     if (modalRef.current && !modalRef.current.contains(e.target)) {
+  //       setModal(false);
+  //     }
+  //   };
+  //   if (modal) {
+  //     document.addEventListener("mousedown", handleClickOutSide);
+  //   } else {
+  //     document.removeEventListener("mousedown", handleClickOutSide);
+  //   }
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutSide);
+  //   };
+  // }, [modal]);
+  // useEffect(() => {
+  //   setModal(false);
+  // }, [location]);
   return (
     <>
       <header className="pt-1 pb-1 container-block flex items-center content-between justify-between shadow-custom border-b-[1px] fixed top-0 bg-white z-10">
@@ -78,7 +102,7 @@ const Header = () => {
             >
               <img
                 className="w-full h-full rounded-full"
-                src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeFl6l4OpDGVujJD483s_MXtso2H55p0AlGyjYfnmnQCUW3TbxnQbwfTJOqVf0ziXjt2rkCiydc2elHiyuOz-sPC&_nc_ohc=IIi3OwsH1EIQ7kNvgHLmgY2&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYDD-d6OyTv-pw14CZA7L9NnQmD50COZY_SInxgA4R9etA&oe=66BACB38"
+                src="https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg"
                 alt="image-no-avartar"
               />
             </div>
@@ -86,6 +110,7 @@ const Header = () => {
               <div
                 className="absolute w-[340px] bg-white p-4 right-0 top-[45px] rounded-lg shadow-custom_2"
                 ref={modalRef}
+                onClick={(e)=> e.stopPropagation()}
               >
                 <div className="profile">
                   <div className="block-top shadow-custom_2 p-2 rounded-lg">
@@ -94,11 +119,11 @@ const Header = () => {
                         <div className="item w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-slate-200 cursor-pointer ">
                           <img
                             className="w-full h-full rounded-full"
-                            src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=cp0_dst-png_p80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_eui2=AeFl6l4OpDGVujJD483s_MXtso2H55p0AlGyjYfnmnQCUW3TbxnQbwfTJOqVf0ziXjt2rkCiydc2elHiyuOz-sPC&_nc_ohc=IIi3OwsH1EIQ7kNvgHLmgY2&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYDD-d6OyTv-pw14CZA7L9NnQmD50COZY_SInxgA4R9etA&oe=66BACB38"
+                            src="https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg"
                             alt="image-no-avartar"
                           />
                         </div>
-                        <span className="ml-2 font-medium">Nguyễn Hữu Lộc</span>
+                        <span className="ml-2 font-medium">{userInfo?.firstName} {userInfo?.lastName}</span>
                       </div>
                     </NavLink>
 
